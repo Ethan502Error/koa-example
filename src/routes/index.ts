@@ -1,6 +1,6 @@
 import Router from '@koa/router'
 
-import bookRoutes from '@routes/book/bookRoutes'
+import bookRoutes from '@/routes/book/bookRoute'
 
 const router = new Router({
   prefix: '/api'
