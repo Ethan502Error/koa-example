@@ -1,0 +1,46 @@
+{
+  "name": "koa-example",
+  "version": "0.1.0",
+  "description": "frontend development database",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "cross-env NODE_ENV=prod tsc && node dist/app.js",
+    "build": "cross-env NODE_ENV=prod (if exist \"./dist\" rd /s/q \"./dist\") && tsc",
+    "test": "cross-env NODE_ENV=dev echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=dev nodemon",
+    "lint": "eslint . --ext .ts",
+    "lint-fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@koa/router": "^12.0.1",
+    "dotenv": "^16.4.1",
+    "koa": "^2.15.0",
+    "koa-bodyparser": "^4.4.1",
+    "koa-json": "^2.0.2",
+    "koa-json-error": "^3.1.2",
+    "koa-logger": "^3.2.1",
+    "koa2-cors": "^2.0.6",
+    "mongodb": "^6.3.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.14.0",
+    "@types/koa-bodyparser": "^4.3.12",
+    "@types/koa-json": "^2.0.23",
+    "@types/koa-json-error": "^3.1.6",
+    "@types/koa-logger": "^3.1.5",
+    "@types/koa2-cors": "^2.0.5",
+    "@types/koa__router": "^12.0.4",
+    "@types/node": "^20.11.17",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.56.0",
+    "nodemon": "^3.0.3",
+    "prettier": "3.2.5",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.3"
+  }
+}

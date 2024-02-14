@@ -1,0 +1,41 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "arrow-parens": ["error", "always"],
+    "capitalized-comments": ["error", "always"],
+    "comma-spacing": "error",
+    "eqeqeq": "error",
+    "indent": ["error", 2],
+    "key-spacing": ["error", { "align": "colon" }],
+    "lines-between-class-members": ["error", "always"],
+    "max-len": ["warn", { "code": 100 }],
+    "no-await-in-loop": "error",
+    "no-console": "error",
+    "no-cond-assign": "error",
+    "no-dupe-keys": "error",
+    "no-empty": "error",
+    "no-duplicate-imports": "error",
+    "no-extra-boolean-cast": "error",
+    "no-eval": "error",
+    "no-extra-parens": "error",
+    "no-extra-semi": "error",
+    "no-global-assign": "error",
+    "no-invalid-regexp": "error",
+    "no-implicit-coercion": "error",
+    "no-mixed-spaces-and-tabs": "error",
+    "no-return-await": "error",
+    "no-undef": "error",
+    "no-unused-vars": "warn",
+    "no-use-before-define": "error",
+    "object-curly-spacing": ["error", "always"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"]
+  }
+}
