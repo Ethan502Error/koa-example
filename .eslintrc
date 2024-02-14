@@ -13,7 +13,6 @@
     "comma-spacing": "error",
     "eqeqeq": "error",
     "indent": ["error", 2],
-    "key-spacing": ["error", { "align": "colon" }],
     "lines-between-class-members": ["error", "always"],
     "max-len": ["warn", { "code": 100 }],
     "no-await-in-loop": "error",

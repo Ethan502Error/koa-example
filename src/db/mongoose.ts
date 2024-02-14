@@ -1,4 +1,4 @@
-import { MongoClient } from 'mongodb'
+import mongoose from 'mongoose'
 import process from 'node:process'
 
 const DB_HEAD = process.env.DB_HEAD
@@ -8,25 +8,22 @@ const DB_HOST = process.env.DB_HOST
 const DB_PORT = process.env.DB_PORT
 const DB_COLLECTION = process.env.DB_COLLECTION
 
+
 const Auth = process.env.NODE_ENV === 'prod' ? `${DB_USER}:${DB_PASS}@` : ''
 
 const mongo_uri = `${DB_HEAD}://${Auth}${DB_HOST}:${DB_PORT}`
 
-const client = new MongoClient(mongo_uri, {
+mongoose.connect(mongo_uri, {
   maxPoolSize: 50,
-  minPoolSize: 2
+  dbName: DB_COLLECTION
 })
 
-const run = async () => {
-  try {
-    await client.connect()
-    await client.db(DB_COLLECTION).command({ ping: 1 })
-    // eslint-disable-next-line no-console, no-undef
-    console.log('Mongodb connected successfully')
-  } finally {
-    await client.close()
-  }
-}
+const db = mongoose.connection
 
 // eslint-disable-next-line no-console, no-undef
-run().catch(console.dir)
+db.on('error', (err) => { console.error(err) })
+
+// eslint-disable-next-line no-console, no-undef
+db.on('open', () => { console.log('Mongodb connected successfully') })
+
+export default db
