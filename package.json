@@ -1,8 +1,8 @@
 {
   "name": "koa-example",
   "version": "0.1.0",
-  "description": "frontend development database",
-  "main": "index.js",
+  "description": "An example to create a koa project",
+  "main": "main.ts",
   "license": "MIT",
   "scripts": {
     "start": "cross-env NODE_ENV=prod tsc && node dist/app.js",
