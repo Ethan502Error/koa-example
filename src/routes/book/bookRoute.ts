@@ -6,7 +6,7 @@ const book = new Router()
 
 // Create some router methods and input controllers | middlewares
 book.get('/', async (ctx) => {
-  ctx.body = 'hooo'
+  ctx.body = 'hello world'
 })
 
 export default book
